@@ -93,4 +93,9 @@
     <string name="custom_auth_signin_status_failed">Error: sign in failed</string>
 
     <string name="error_sign_in_failed">Sign in failed, see logs for details.</string>
+    <string name="welcome">Welcome:</string>
+    <string name="new_post">New Post</string>
+    <string name="make_new_post">Publish Post</string>
+    <string name="post">Enter Post Below</string>
+    <string name="user_post">New Post......</string>
 </resources>
