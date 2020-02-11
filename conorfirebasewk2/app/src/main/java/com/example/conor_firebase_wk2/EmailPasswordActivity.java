@@ -1,5 +1,6 @@
 package com.example.conor_firebase_wk2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -196,13 +197,16 @@ public class EmailPasswordActivity extends BaseActivity implements
     private void updateUI(FirebaseUser user) {
         hideProgressBar();
         if (user != null) {
-            mStatusTextView.setText(getString(R.string.emailpassword_status_fmt,
-                    user.getEmail(), user.isEmailVerified()));
-            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
 
-            findViewById(R.id.emailPasswordButtons).setVisibility(View.GONE);
-            findViewById(R.id.emailPasswordFields).setVisibility(View.GONE);
-            findViewById(R.id.signedInButtons).setVisibility(View.VISIBLE);
+            Intent intent = new Intent(this, ViewPosts.class);
+            startActivity(intent);
+//            mStatusTextView.setText(getString(R.string.emailpassword_status_fmt,
+//                    user.getEmail(), user.isEmailVerified()));
+//            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+//
+//            findViewById(R.id.emailPasswordButtons).setVisibility(View.GONE);
+//            findViewById(R.id.emailPasswordFields).setVisibility(View.GONE);
+//            findViewById(R.id.signedInButtons).setVisibility(View.VISIBLE);
 
             findViewById(R.id.verifyEmailButton).setEnabled(!user.isEmailVerified());
         } else {
