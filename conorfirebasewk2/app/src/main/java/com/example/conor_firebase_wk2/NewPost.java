@@ -27,6 +27,7 @@ public class NewPost extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void resetText(){
+
         userPost.setText(" ");
     }
 
