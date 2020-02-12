@@ -38,6 +38,7 @@
         android:layout_marginBottom="40dp"
         android:backgroundTint="#9C6CC0"
         android:text="@string/new_post"
+        android:textColor="#FCFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -49,6 +50,7 @@
         android:layout_marginBottom="40dp"
         android:backgroundTint="#EDE21059"
         android:text="@string/sign_out"
+        android:textColor="#FCFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
