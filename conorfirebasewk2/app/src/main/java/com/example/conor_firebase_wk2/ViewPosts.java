@@ -26,7 +26,7 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private CollectionReference notebookRef = db.collection("test");
+    private CollectionReference notebookRef = db.collection("Posts");
     private PostAdapter adapter;
 
 
@@ -54,7 +54,7 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
 
         adapter = new PostAdapter(options);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerPosts);
+        recyclerView = findViewById(R.id.recyclerPosts);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);

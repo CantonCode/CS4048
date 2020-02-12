@@ -3,6 +3,7 @@ package com.example.conor_firebase_wk2;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,14 +14,19 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 public class PostAdapter extends FirestoreRecyclerAdapter<Post,PostAdapter.PostHolder>{
 
+    private static final String TAG = "MyActivity";
+
     public PostAdapter(@NonNull FirestoreRecyclerOptions<Post> options) {
         super(options);
     }
 
     @Override
     protected void onBindViewHolder(@NonNull PostHolder holder, int position, @NonNull Post model) {
-        holder.textViewEmail.setText(model.getUserEmail());
-        holder.textViewContent.setText(model.getPostContent());    }
+        holder.textViewEmail.setText(model.getUsername());
+        holder.textViewContent.setText(model.getContent());
+        Log.i(TAG, holder.textViewEmail.getText().toString());
+        Log.i(TAG, holder.textViewContent.getText().toString());
+    }
 
     @NonNull
     @Override
