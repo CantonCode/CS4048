@@ -83,7 +83,7 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
 
     private void signOut() {
         mAuth.signOut();
-        Intent intent = new Intent(this, EmailPasswordActivity.class);
+        Intent intent = new Intent(this, BaseActivity.class);
         startActivity(intent);
     }
 
