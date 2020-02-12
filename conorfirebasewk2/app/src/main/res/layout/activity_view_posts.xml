@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A9D3E6"
     tools:context=".ViewPosts">
 
     <TextView
@@ -12,15 +13,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="@string/welcome"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPosts"
-        android:layout_width="317dp"
-        android:layout_height="273dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="329dp"
+        android:layout_height="424dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome"
@@ -33,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="40dp"
+        android:backgroundTint="#9C6CC0"
         android:text="@string/new_post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -43,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="40dp"
+        android:backgroundTint="#EDE21059"
         android:text="@string/sign_out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

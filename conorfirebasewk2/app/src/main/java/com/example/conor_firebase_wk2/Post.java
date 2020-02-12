@@ -1,8 +1,9 @@
 package com.example.conor_firebase_wk2;
 
-public class Post {
+public class Post{
     private String username;
     private String content;
+    private String time;
     private int postNum;
 
     public Post(){
@@ -10,25 +11,35 @@ public class Post {
     }
 
 
-    public Post(String Username, String Content){
+    public Post(String Username, String Content, String time){
         this.username = Username;
         this.content = Content;
+        this.time = time;
 //        this.postNum=postNum;
     }
 
-    public String getUsername() {
+    public String getUsername()
+    {
         return username;
     }
 
-    public String getContent() {
+    public String getContent()
+    {
         return content;
     }
 
-    public void setUsername(String username) {
+    public String getTime()
+    {
+        return time;
+    }
+
+    public void setUsername(String username)
+    {
         this.username = username;
     }
 
-    public void setContent(String content) {
+    public void setContent(String content)
+    {
         this.content = content;
     }
 

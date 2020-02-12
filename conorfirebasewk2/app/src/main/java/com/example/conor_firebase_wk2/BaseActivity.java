@@ -1,6 +1,8 @@
 package com.example.conor_firebase_wk2;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ProgressBar;
@@ -12,6 +14,12 @@ public class BaseActivity extends AppCompatActivity {
 
     @VisibleForTesting
     public ProgressBar mProgressBar;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.base_activity);
+    }
 
     public void setProgressBar(int resId) {
         mProgressBar = findViewById(resId);
@@ -40,6 +48,15 @@ public class BaseActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
         hideProgressBar();
+    }
+
+    public void onClick(View v){
+        int i = v.getId();
+
+        if (i == R.id.loginButton){
+            Intent intent = new Intent(BaseActivity.this, EmailPasswordActivity.class);
+            startActivity(intent);
+        }
     }
 
 }
