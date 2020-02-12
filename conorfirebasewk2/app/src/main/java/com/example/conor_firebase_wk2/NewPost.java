@@ -59,15 +59,15 @@ public class NewPost extends AppCompatActivity implements View.OnClickListener{
     private void uploadData(String display) {
 
         pd.show();
-
+        String id = UUID.randomUUID().toString();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         String user = currentUser.getEmail();
         Map<String, Object> doc = new HashMap<>();
-        doc.put("Username",user);
-        doc.put("Content", display);
+        doc.put("username",user);
+        doc.put("content", display);
 
         //mAuth.createUserWithEmailAndPassword()
-        db.collection("Posts").document(user).set(doc).addOnCompleteListener(new OnCompleteListener<Void>() {
+        db.collection("Posts").document(id).set(doc).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 pd.dismiss();
