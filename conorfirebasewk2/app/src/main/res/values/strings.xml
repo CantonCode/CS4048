@@ -98,4 +98,6 @@
     <string name="make_new_post">Publish Post</string>
     <string name="post">Enter Post Below</string>
     <string name="user_post">New Post......</string>
+    <string name="user_email">User@user.com</string>
+    <string name="user_post_content">hi i am user sending a message</string>
 </resources>
