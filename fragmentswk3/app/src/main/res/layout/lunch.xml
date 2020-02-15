@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:text="Lunch Menu"
+        android:layout_marginTop="40dp"
+        android:id="@+id/textTitle"/>
+
+    <CheckBox
+        android:id="@+id/lasagna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="Lasagna and Chips €7.20" />
+
+    <CheckBox
+        android:id="@+id/chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:text="Chicken roll and Chips €5.00" />
+
+    <CheckBox
+        android:id="@+id/burger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Burger and Chips €6.40" />
+
+</RelativeLayout>
