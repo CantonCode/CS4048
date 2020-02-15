@@ -23,6 +23,7 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
     private TextView welcomeUser;
     private FirebaseAuth mAuth;
     private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -46,17 +47,17 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
     }
 
     public void setUpRecyclerView(){
-        Query query = notebookRef.limit(5);
-
+        Query query = notebookRef.limit(5).orderBy("Time", Direction.DESCENDING);
         FirestoreRecyclerOptions<Post> options = new FirestoreRecyclerOptions.Builder<Post>()
                 .setQuery(query, Post.class)
                 .build();
 
         adapter = new PostAdapter(options);
 
+        mLayoutManager = new LinearLayoutManager(this);
         recyclerView = findViewById(R.id.recyclerPosts);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(adapter);
 
 
@@ -69,7 +70,7 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
         // Check if user is signed in (non-null) and update UI accordingly.
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        welcomeUser.setText("Welcome: " + currentUser.getEmail());
+        welcomeUser.setText(currentUser.getEmail());
 
         adapter.startListening();
     }
@@ -82,7 +83,7 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
 
     private void signOut() {
         mAuth.signOut();
-        Intent intent = new Intent(this, EmailPasswordActivity.class);
+        Intent intent = new Intent(this, BaseActivity.class);
         startActivity(intent);
     }
 
@@ -102,6 +103,4 @@ public class ViewPosts extends AppCompatActivity implements View.OnClickListener
             toNewPost();
         }
     }
-
-
 }

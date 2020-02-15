@@ -3,7 +3,9 @@ package com.example.conor_firebase_wk2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.Touch;
 import android.view.View;
@@ -17,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -53,6 +57,7 @@ public class NewPost extends AppCompatActivity implements View.OnClickListener{
         if (i == R.id.publishPost){
             String display = userPost.getText().toString().trim();
             uploadData(display);
+            finish();
         }
     }
 
@@ -62,9 +67,15 @@ public class NewPost extends AppCompatActivity implements View.OnClickListener{
         String id = UUID.randomUUID().toString();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         String user = currentUser.getEmail();
+
+        Date date= new Date();
+        long time = date.getTime();
+        Timestamp ts = new Timestamp(time);
+
         Map<String, Object> doc = new HashMap<>();
         doc.put("username",user);
         doc.put("content", display);
+        doc.put("Time", ts);
 
         //mAuth.createUserWithEmailAndPassword()
         db.collection("Posts").document(id).set(doc).addOnCompleteListener(new OnCompleteListener<Void>() {

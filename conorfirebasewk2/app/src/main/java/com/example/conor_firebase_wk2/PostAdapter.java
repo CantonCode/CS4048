@@ -26,6 +26,7 @@ public class PostAdapter extends FirestoreRecyclerAdapter<Post,PostAdapter.PostH
         holder.textViewContent.setText(model.getContent());
         Log.i(TAG, holder.textViewEmail.getText().toString());
         Log.i(TAG, holder.textViewContent.getText().toString());
+
     }
 
     @NonNull

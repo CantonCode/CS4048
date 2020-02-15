@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A9D3E6"
     tools:context=".NewPost">
 
     <TextView
@@ -13,6 +14,8 @@
         android:layout_marginTop="264dp"
         android:layout_marginEnd="140dp"
         android:text="@string/post"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,10 +25,14 @@
         android:id="@+id/publishPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
         android:layout_marginTop="180dp"
         android:layout_marginEnd="144dp"
+        android:backgroundTint="#9C6CC0"
         android:text="@string/make_new_post"
+        android:textColor="#FCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/postContent" />
 
     <EditText
@@ -35,9 +42,11 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="96dp"
         android:ems="10"
+        android:hint="New Post"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="@string/user_post"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
