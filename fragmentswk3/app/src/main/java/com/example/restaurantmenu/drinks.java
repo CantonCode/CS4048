@@ -26,24 +26,27 @@ public class drinks extends Fragment {
         guinness.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Guinness\n";
+                ((MainActivity) getActivity()).order.put("Guinness", 4.2);
                 ((MainActivity) getActivity()).setViewPager(5);
+                guinness.setChecked(false);
             }
         });
 
         coke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Coke\n";
+                ((MainActivity) getActivity()).order.put("Coke", 2.5);
                 ((MainActivity) getActivity()).setViewPager(5);
+                coke.setChecked(false);
             }
         });
 
         fanta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Fanta\n";
+                ((MainActivity) getActivity()).order.put("Fanta", 2.5);
                 ((MainActivity) getActivity()).setViewPager(5);
+                fanta.setChecked(false);
             }
         });
 

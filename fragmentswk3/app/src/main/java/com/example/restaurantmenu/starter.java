@@ -24,16 +24,18 @@ public class starter extends Fragment {
         soup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Soup\n";
+                ((MainActivity) getActivity()).order.put("Soup", 3.5);
                 ((MainActivity) getActivity()).setViewPager(3);
+                soup.setChecked(false);
             }
         });
 
         salad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Salad\n";
+                ((MainActivity) getActivity()).order.put("Salad", 4.0);
                 ((MainActivity) getActivity()).setViewPager(3);
+                salad.setChecked(false);
             }
         });
 

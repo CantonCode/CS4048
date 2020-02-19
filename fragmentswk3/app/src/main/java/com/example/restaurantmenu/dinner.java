@@ -26,24 +26,27 @@ public class dinner extends Fragment {
         pizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Pizza and Chips\n";
+                ((MainActivity) getActivity()).order.put("Pizza and Chips", 7.2);
                 ((MainActivity) getActivity()).setViewPager(4);
+                pizza.setChecked(false);
             }
         });
 
         chickenC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Chicken Curry and Chips\n";
+                ((MainActivity) getActivity()).order.put("Chicken Curry and Chips", 9.5);
                 ((MainActivity) getActivity()).setViewPager(4);
+                chickenC.setChecked(false);
             }
         });
 
         fish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Fish and Chips\n";
+                ((MainActivity) getActivity()).order.put("Fish and Chips", 10.0);
                 ((MainActivity) getActivity()).setViewPager(4);
+                fish.setChecked(false);
             }
         });
         return view;

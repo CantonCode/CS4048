@@ -26,7 +26,6 @@ public class home extends Fragment {
         btnlunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Lunch\n";
                 ((MainActivity) getActivity()).setViewPager(1);
             }
         });
@@ -34,7 +33,6 @@ public class home extends Fragment {
         btndinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity) getActivity()).order += "Dinner\n";
                 ((MainActivity) getActivity()).setViewPager(2);
             }
         });
