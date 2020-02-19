@@ -27,7 +27,7 @@ public class lunch extends Fragment {
             @Override
             public void onClick(View view) {
                 ((MainActivity) getActivity()).order.put("Lasagna and Chips", 7.2);
-                ((MainActivity) getActivity()).setViewPager(5);
+                ((MainActivity) getActivity()).setViewPager(4);
                 lasagna.setChecked(false);
             }
         });
@@ -36,7 +36,7 @@ public class lunch extends Fragment {
             @Override
             public void onClick(View view) {
                 ((MainActivity) getActivity()).order.put("Chicken Roll and Chips", 5.0);
-                ((MainActivity) getActivity()).setViewPager(5);
+                ((MainActivity) getActivity()).setViewPager(4);
                 chicken.setChecked(false);
             }
         });
@@ -45,7 +45,7 @@ public class lunch extends Fragment {
             @Override
             public void onClick(View view) {
                 ((MainActivity) getActivity()).order.put("Beef Burger and Chips",6.4);
-                ((MainActivity) getActivity()).setViewPager(5);
+                ((MainActivity) getActivity()).setViewPager(4);
                 burger.setChecked(false);
             }
         });

@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1AF88B6"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
-        android:text="Welcome to the Restaurant"
         android:layout_marginTop="40dp"
-        android:id="@+id/textTitle"/>
+        android:fontFamily="cursive"
+        android:text="Welcome to the Restaurant"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <Button
+        android:id="@+id/btnLunch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:id="@+id/btnLunch"
-        android:text="Lunch Menu"/>
+        android:backgroundTint="#E2F8C8"
+        android:text="Lunch Menu" />
 
     <Button
+        android:id="@+id/btnDinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
-        android:id="@+id/btnDinner"
-        android:text="Dinner Menu"/>
+        android:backgroundTint="#E2F8C8"
+        android:text="Dinner Menu" />
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.restaurantmenu;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,7 @@ public class drinks extends Fragment {
 
         guinness = (CheckBox) view.findViewById(R.id.guinness);
         coke = (CheckBox) view.findViewById(R.id.coke);
-        fanta  = (CheckBox) view.findViewById(R.id.fanta);
+        fanta = (CheckBox) view.findViewById(R.id.fanta);
 
         guinness.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +50,7 @@ public class drinks extends Fragment {
                 fanta.setChecked(false);
             }
         });
-
         return view;
     }
+
 }
