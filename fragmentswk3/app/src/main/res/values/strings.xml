@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RestaurantMenu</string>
+    <string name="total">Total</string>
+    <string name="ok">OK</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="checkbox">Next</string>
+    <string name="next">Next</string>
+    <string name="thank">Thanks for placing your order, please click next to continue</string>
 </resources>

@@ -34,7 +34,7 @@ public class summary extends Fragment {
         double total=0;
 
         for (String key: keys) {
-            Log.d("key", key);
+            Log.d("adding items", key);
             text2.append(key + " ");
             text2.append((((MainActivity)getActivity()).order.get(key)).toString() + "\n");
             total+=((MainActivity)getActivity()).order.get(key);

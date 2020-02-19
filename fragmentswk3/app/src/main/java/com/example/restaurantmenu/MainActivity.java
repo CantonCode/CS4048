@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new starter());
         adapter.addFragment(new dinner());
         adapter.addFragment(new drinks());
+        adapter.addFragment(new confirm());
         adapter.addFragment(new summary());
 
         viewPager.setAdapter(adapter);
