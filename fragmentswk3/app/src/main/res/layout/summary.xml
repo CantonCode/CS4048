@@ -42,7 +42,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="500dp"
         android:text="@string/total"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
@@ -53,5 +53,5 @@
         android:layout_marginTop="500dp"
         android:text=""
         android:textColor="#FDEC182A"
-        android:textSize="18sp" />
+        android:textSize="30sp" />
 </RelativeLayout>

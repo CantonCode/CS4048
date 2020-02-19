@@ -24,7 +24,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:fontFamily="sans-serif-black"
-        android:text="Guinness €4.20" />
+        android:text="Guinness €4.20"
+        android:textSize="18sp" />
 
     <CheckBox
         android:id="@+id/coke"
@@ -32,11 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="270dp"
         android:fontFamily="sans-serif-black"
         android:text="Coke €2.50"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="14sp" />
+        android:textSize="18sp" />
 
     <CheckBox
         android:id="@+id/fanta"
@@ -44,8 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="340dp"
         android:fontFamily="sans-serif-black"
-        android:text="Fanta €2.50" />
+        android:text="Fanta €2.50"
+        android:textSize="18sp" />
 
 </RelativeLayout>

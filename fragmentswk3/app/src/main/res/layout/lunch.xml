@@ -24,7 +24,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:fontFamily="sans-serif-black"
-        android:text="Lasagna and Chips €7.20" />
+        android:text="Lasagna and Chips €7.20"
+        android:textSize="18sp" />
 
     <CheckBox
         android:id="@+id/chicken"
@@ -32,9 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="270dp"
         android:fontFamily="sans-serif-black"
-        android:text="Chicken roll and Chips €5.00" />
+        android:text="Chicken roll and Chips €5.00"
+        android:textSize="18sp" />
 
     <CheckBox
         android:id="@+id/burger"
@@ -42,8 +44,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="340dp"
         android:fontFamily="sans-serif-black"
-        android:text="Burger and Chips €6.40" />
+        android:text="Burger and Chips €6.40"
+        android:textSize="18sp" />
 
 </RelativeLayout>
